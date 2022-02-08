@@ -1,14 +1,11 @@
-node('main'){
-    stages{
-        stage("building..."){
-            agent {
-                any { 
-                    image 'node:16.13.1-alpine'
-                }
-            }
-        }
-        
-        stage('Test') {
+pipeline {
+    agent { 
+        any { 
+            image 'node:12.16.2'
+        } 
+    }
+    stages {
+        stage('Build') {
             steps {
                 sh 'node --version'
             }
