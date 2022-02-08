@@ -1,4 +1,4 @@
-node('seila'){
+node('agora-vai'){
     stage('Begin'){
         echo "Passou pelo begin"
     }
