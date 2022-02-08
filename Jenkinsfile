@@ -1,11 +1,15 @@
-node('seila'){
-    stage('Begin'){
-        echo "Passou pelo begin"
+pipeline {
+    agent {
+        docker { 
+            label "docker"
+            image 'node:16.13.1-alpine'
+        }
     }
-
-    stage('building...'){
-        docker.image('node:6-alpine').inside(){
-            sh "node --version"
+    stages {
+        stage('Test') {
+            steps {
+                sh 'node --version'
+            }
         }
     }
 }
