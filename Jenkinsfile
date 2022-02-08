@@ -8,7 +8,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'node --version'
-                echo
+                echo nao e pra funcionar pourra
             }
         }
     }
