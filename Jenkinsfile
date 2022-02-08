@@ -1,4 +1,4 @@
-node('seila'){
+node('main'){
     stages{
         stage("building..."){
             agent {
