@@ -40,11 +40,6 @@ def notifyBuild(String buildStatus = 'STARTED') {
     colorCode = '#FF0000'
   }
 
-  // Send notifications
-  slackSend (color: colorCode, message: summary)
-
-  hipchatSend (color: color, notify: true, message: summary)
-
   emailext (
       subject: subject,
       body: details,
