@@ -1,4 +1,4 @@
-node('docker') {
+node() {
     ansiColor('xterm') {
 
         stage('Checkout') {
