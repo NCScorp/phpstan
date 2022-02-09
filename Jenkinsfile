@@ -1,4 +1,4 @@
-node('php-stan') {
+node() {
     ansiColor('xterm') {
 
         stage('Checkout') {
