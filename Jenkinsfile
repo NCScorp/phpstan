@@ -10,9 +10,12 @@ node() {
         }
 
         stage('Prepare directory') {
-            sh 'docker run --rm -v $(pwd):/project -w /project jakzal/phpqa chmod -R 777 build'
             sh 'rm -rf build/logs'
             sh 'mkdir -p build/logs'
+        }
+
+        stage('Composer-dev'){
+            sh 'composer install --prefer-dist --optimize-autoloader --no-scripts --ignore-platform-reqs'
         }
 
         stage('Install dependencies') {

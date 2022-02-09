@@ -1,0 +1,10 @@
+{
+    "name": "elnico/phpstan",
+    "authors": [
+        {
+            "name": "NCScorp",
+            "email": "nicolasscorpelini@nasajon.com.br"
+        }
+    ],
+    "require": {}
+}
