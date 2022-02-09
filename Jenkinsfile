@@ -10,7 +10,6 @@ node() {
         }
 
         stage('Prepare directory') {
-            sh 'docker run --rm -v $(pwd):/project -w /project jakzal/phpqa chmod -R 777 build'
             sh 'rm -rf build/logs'
             sh 'mkdir -p build/logs'
         }
