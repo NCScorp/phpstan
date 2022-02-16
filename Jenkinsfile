@@ -21,7 +21,7 @@ node() {
         }   
         parallel (
             "PhpMetrics": {
-                sh 'docker run --rm -v $(pwd):/project -w /project jakzal/phpqa phpmetrics --report-html=build/logs/report.html > build/logs/phpmetrics-report.html src/ || exit 0'
+                sh 'docker run --rm -v $(pwd):/project -w /project jakzal/phpqa phpmetrics --report-html=report.html src/ || exit 0'
                 publishHTMLReport('build/logs', 'report.html', 'PHPMetrics')
             },
 
