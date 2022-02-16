@@ -27,7 +27,6 @@ node() {
 
             "PHPCodeSniffer": {
                 sh 'docker run --rm -v $(pwd):/project -w /project jakzal/phpqa phpcs --report=full --report-file=build/logs/checkstyle.txt --standard=PSR2 --encoding=UTF-8 --ignore="*.js" src/  || exit 0'
-                checkstyle pattern: 'build/logs/checkstyle.xml'
             },
         )
     }     
